@@ -24,7 +24,7 @@ function UserCard({user}:UserCardProps) {
 
     return(
         <div className="user-card">
-            <h2 className="user-card__name" onClick={handleNameClick}>
+            <h2 className="user-card__name">
                 {user.name}
             </h2>
             <p className="user-card__username">@{user.username}</p>
@@ -35,6 +35,9 @@ function UserCard({user}:UserCardProps) {
                 {user.address.zipcode}
             </p>
             <div className="user-card__actions">
+                <button className="btn btn--view" onClick={handleNameClick}>
+                    View Details
+                </button>
                 <button className="btn btn--edit" onClick={handleEdit}>
                     Edit
                 </button>
